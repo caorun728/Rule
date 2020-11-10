@@ -1,0 +1,15 @@
+#!name=Cao.Run Task - All in one
+#!desc=Surge Task All In One Module
+//raw: https://raw.githubusercontent.com/caorun728/Rule/master/Surge/Pro/Module/Task.sgmodule
+
+[Script]
+# > iQIYI Dailybonus
+爱奇艺签到 = type=cron,cronexp=0 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+
+# > JD DailyBonus
+京东多合一签到 = type=cron,cronexp=0 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+# > WPS
+# 打开 APP 我 > 签到 (右上角, 不用手动签到)
+# 打开 `我的WPS会员` 小程序 (手动签到)
+WPS签到 = type=cron, cronexp=0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.js

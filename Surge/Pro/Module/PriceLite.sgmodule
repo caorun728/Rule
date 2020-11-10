@@ -1,0 +1,17 @@
+#!name=Cao.Run Historical Price Lite
+#!desc=The historical prices of Jingdong and Taobao are combined with their respective hostname.
+#!Github:https://github.com/yichahucha/surge/tree/master?files=1
+#!RAW:https://raw.githubusercontent.com/caorun728/Rule/master/Surge/Pro/Module/Price.sgmodule
+
+[Script]
+# > Historical price
+# Display commodity historical price.
+# Hostname: trade-acs.m.taobao.com api.m.jd.com
+jd_price.js = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price_lite.js
+
+tb_price.js = type=http-request,pattern=^http://.+/amdc/mobileDispatch,requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price_lite.js
+tb_price.js = type=http-response,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price_lite.js
+
+
+[MITM]
+hostname = %APPEND% trade-acs.m.taobao.com, api.m.jd.com
