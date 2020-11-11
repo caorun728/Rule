@@ -2,8 +2,6 @@
 #!desc=Remove TikTok's regional restrictions.
 
 [URL Rewrite]
-^https://api[\w-]*?.tiktokv.com/aweme/v\d/policy/notice/? - reject
-
 (?<=_region=)CN(?=&) UK 302
 (?<=\?version_code=)18.2..(?=.?.?&) 1 302
 (?<=\?version_code=)1[8-9]..(?=.?.?&) 1 302
@@ -11,4 +9,4 @@
 (?<=\d\/\?\w{7}_\w{4}=)1[6-7]..(?=.?.?&) 17 302
 
 [MITM]
-hostname = %INSERT% *.tiktokv.com, *.byteoversea.com, *.musical.ly, *.snssdk.com
+hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.musical.ly, *.snssdk.com
