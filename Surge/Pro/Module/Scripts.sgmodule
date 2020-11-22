@@ -90,7 +90,7 @@ http-response https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json r
 
 # > 水印精灵
 # > hostname: api1.dobenge.cn
-syjl.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/syjl.js,type=http-response,pattern=^https:\/\/api1\.dobenge\.cn\/api\/user\/getuserinfo
+http-response https:\/\/api1\.dobenge\.cn\/api\/user\/getuserinfo requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/syjl.js
 
 # > 大片-视频编辑器 VIP
 # > hostname api.vnision.com
@@ -122,7 +122,7 @@ rrsp_banner = type=http-response,requires-body=true,pattern=^https?:\/\/api\.rr\
 
 # > Toutiao
 # > hostname *.snssdk.com
-# > http-response ^https?://[\s\S]*\.snssdk\.com/api/news/feed/v88/ requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/Toutiao.js
+http-response ^https?://[\s\S]*\.snssdk\.com/api/news/feed/v88/ requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/Toutiao.js
 
 # > Weibo
 http-response ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
