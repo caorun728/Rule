@@ -1,0 +1,19 @@
+on: push
+name: Auto Sync
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout source codes
+      uses: actions/checkout@v1
+    - name: Mirror Github to Gitee with white list
+      uses: caorun728/Rule@master
+      with:
+        src: github/caorun728
+        dst: gitee/caorun728
+        dst_key: ${{ secrets.GITEE_KEY }}
+        dst_token:  ${{ secrets.GITEE_TOKEN }}
+        white_list: 'Rule'
+        force_update: true
+        debug: false

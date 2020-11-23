@@ -134,7 +134,7 @@ http-request ^https://mp\.weixin\.qq\.com/mp/getappmsgad script-path=https://Cho
 
 # > WeRead
 # i.weread.qq.com
-http-response https?:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary requires-body=1,max-size=0,script-path=https://gitee.com/caorun728/Rules/raw/master/Surge/Pro/Script/weixinyuedu.js,script-update-interval=0
+http-response https?:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary requires-body=1,max-size=0,script-path=https://gitee.com/caorun728/Rule/raw/master/Surge/Pro/Script/weixinyuedu.js,script-update-interval=0
 
 # > WPS
 # > account.wps.cn

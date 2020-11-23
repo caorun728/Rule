@@ -9,7 +9,7 @@
 
 # > 京东系列
 # >>> 取消关注 {23:59}
-# > 取消关注 = type=cron, cronexp="0 59 23 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/caorun728/Rules/raw/master/Surge/Pro/Script/jd_unsubscribe.js
+# > 取消关注 = type=cron, cronexp="0 59 23 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/caorun728/Rule/raw/master/Surge/Pro/Script/jd_unsubscribe.js
 # >>> 京东京豆 {*/12:01} (双号执行时长大约180s左右)
 京豆 = type=cron, cronexp="0 1 */12 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 # >>> 京东京豆变动 {23:58}
