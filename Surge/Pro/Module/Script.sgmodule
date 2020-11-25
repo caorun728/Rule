@@ -130,7 +130,7 @@ http-response ^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positiv
 
 # > WeChat
 # > hostname: mp.weixin.qq.com
-http-request ^https://mp\.weixin\.qq\.com/mp/getappmsgad script-path=https://Choler.github.io/Surge/Script/WeChat.js
+# > http-request ^https://mp\.weixin\.qq\.com/mp/getappmsgad script-path=https://raw.githubusercontent.com/caorun728/Rule/master/Surge/Pro/Script/wechat.js
 
 # > WeRead
 # i.weread.qq.com
