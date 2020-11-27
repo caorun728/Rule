@@ -55,15 +55,6 @@ AND,((USER-AGENT,ZhihuHybrid*), (URL-REGEX,.*recommend)),REJECT
 # > hostname:api.bjxkhc.com
 # > http-response ^https?:\/\/api.bjxkhc.com\/index\.php\/app\/ios\/(vod\/show|(user|vod|topic|type)\/index) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/aimeiju.js
 
-# > BaiduCloud
-# > pan.baidu.com
-# > http-response https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
-
-
-# > Bahamut Ads
-# Bahamut animation app removes ads.hostname api.gamer.com.tw
-# > 動畫瘋(Req) = type=http-request,pattern=https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v3\/token\.php,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bahamut.js
-# > 動畫瘋(Res) = type=http-response,pattern=https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v3\/token\.php,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bahamut.js
 
 # > Bilibili Ads
 # Bilibili app removes ads.hostanme: api.bilibili.com, app.bilibili.com, api.live.bilibili.com
@@ -124,9 +115,6 @@ http-response ^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positiv
 # i.weread.qq.com
 http-response https?:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/caorun728/Rule/master/Surge/Pro/Script/weixinyuedu.js,script-update-interval=0
 
-# > WPS
-# > account.wps.cn
-# > http-response ^https?:\/\/account\.wps\.cn\/api\/users requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
 
 # > Zhihu
 # Zhihu app removes ads.hostname: www.zhihu.com, api.zhihu.com, link.zhihu.com, 118.89.204.198
