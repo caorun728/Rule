@@ -3,4 +3,4 @@
 #!Github:https://github.com/Peng-YM/QuanX/blob/master/Tools/AutoPolicy/auto-policy.sgmodule
 
 [Script]
-event network-changed script-path=https://raw.githubusercontent.com/caorun728/Rule/master/Surge/Pro/Script/auto-policy.js
+event network-changed script-path=https://gitee.com/caorun728/Rule/raw/master/Surge/Pro/Script/auto-policy.js
