@@ -1,0 +1,5 @@
+#!name=General
+#!desc=Surge General
+
+[General]
+http-api = caorun@0.0.0.0:6166
