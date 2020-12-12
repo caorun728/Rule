@@ -22,10 +22,6 @@ AND,((USER-AGENT,ZhihuHybrid*), (URL-REGEX,.*recommend)),REJECT
 
 
 [URL Rewrite]
-# > GeoIP
-#hostname geolite.maxmind.com
-# > ^https?:\/\/geolite\.maxmind\.com\/download\/geoip\/database\/GeoLite2-Country\.tar\.gz https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=RpGri4akOiTZogdb&suffix=tar.gz 302
-
 # > Q-Search
 ^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
 ^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
