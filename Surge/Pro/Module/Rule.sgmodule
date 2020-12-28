@@ -1,9 +1,0 @@
-#!name=Cao.Run Rule
-#!desc=Surge Ruleset
-
-[Rule]
-# > Custom Rulesets
-# RULE-SET,https://raw.githubusercontent.com/caorun728/Rule/master/Surge/Pro/Provider/Proxy.list,Proxy
-# RULE-SET,https://raw.githubusercontent.com/caorun728/Rule/master/Surge/Pro/Provider/China.list,DIRECT
-# RULE-SET,https://raw.githubusercontent.com/caorun728/Rule/master/Surge/Pro/Provider/Reject.list,AdBlock
-# RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Privacy.list,AdBlock

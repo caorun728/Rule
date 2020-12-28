@@ -1,5 +1,5 @@
-#!name=General
-#!desc=Surge General
+#!name=Surge General
+#!desc=Surge 配置扩展
 
 [General]
 http-api = caorun@0.0.0.0:6166
