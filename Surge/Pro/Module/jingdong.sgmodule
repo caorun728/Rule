@@ -1,11 +1,11 @@
 #!name=京东领豆任务合集 (GitHub)
-#!desc=该模块收集并整理了当前所有关于 “京东” 可以获取京豆的脚本，脚本地址使用 GitHub 地址，该模块会快速更新。上次更新时间：2020-12-26 22:50
+#!desc=该模块收集并整理了当前所有关于 “京东” 可以获取京豆的脚本，脚本地址使用 GitHub 地址，该模块会快速更新。上次更新时间：2021-01-02 12:22
 #!tag = type=cron, cronexp="cronexample", wake-system=1, timeout=600, script-path=javescript
 #!GitHub:https://github.com/chiupam/Proxy/blob/master/Surge/jingdong.sgmodule
 #!Raw:https://raw.githubusercontent.com/chiupam/Proxy/master/Surge/jingdong.sgmodule
 [Script]
 # > 上次更新的内容
-# >>> 新增 "疯狂的Joy" & '超级直播间红包雨' 临时活动脚本, 结束时间未知
+# >>> 删除到期脚本
 
 # > 获取京东Cookie 
 # >>> 获取地址在下方,复制到浏览器打开,使用手机号登陆,点击签到即可
@@ -82,10 +82,6 @@
 # >>> 京东快递签到 {00:10}
 京东快递签到 = type=cron, cronexp="30 10 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_kd.js
 
-# >>> 京东代属 {07:09}
-# >>>>> 此脚本有些用户无法获得京豆, 请忽视!
-京东代属 = type=cron, cronexp="30 9 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_ds.js
-
 # >>> 领京豆额外奖励 {07:10}
 # >>>>> 活动入口：首页--领京豆
 领京豆额外奖励 = type=cron, cronexp="0 10 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_home.js
@@ -101,18 +97,5 @@
 # >>> 疯狂的Joy (截止日期不清楚)
 疯狂的Joy = type=cron, cronexp="10 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_crazy_joy.js
 
-# >>> 看一看 (活动结束时间为止)
-看一看 = type=cron, cronexp="0 10-20/2 9 * * * ", wake-system=1, timeout=1800, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_watch.js
-
-# >>> 排行榜 (2020.12.31结束)
-排行榜 = type=cron,cronexp="0 13 9 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_rankingList.js
-
-# >>> 健康抽奖机 (2020.12.31结束)
-排行榜 = type=cron,cronexp="30 9 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_health.js
-
-# >>> 秒杀红包雨 (2020.12.31结束)
-# >>>>> 活动入口：首页--秒杀--下拉--狂撒 2 亿京豆
-秒杀红包雨 = type=cron, cronexp="0 10 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_ms_redrain.js
-
 [MITM]
-hostname = %APPEND% api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com, boxjs.net
+hostname = %APPEND% api.m.jd.com, jdjoy.jd.com, draw.jdfcloud.com
