@@ -1,0 +1,7 @@
+#!name=Surge Running Mode
+#!desc=根据当前网络自动切换模式 by Peng-YM
+#!Github:https://github.com/Peng-YM/QuanX/blob/master/Tools/RunningMode/running-mode.sgmodule
+
+[Script]
+
+event network-changed script-path=https://raw.githubusercontent.com/caorun728/Rule/master/Surge/Pro/Script/running-mode.js

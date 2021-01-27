@@ -52,6 +52,9 @@ manager();
 $done();
 
 function manager() {
+  let ssid;
+  let mode;
+
   if (isSurge) {
     const v4_ip = $network.v4.primaryAddress;
     // no network connection
@@ -59,8 +62,8 @@ function manager() {
       notify("🤖 Surge 运行模式", "❌ 当前无网络", "");
       return;
     }
-    const ssid = $network.wifi.ssid;
-    const mode = ssid ? lookupSSID(ssid) : config.cellular;
+    ssid = $network.wifi.ssid;
+    mode = ssid ? lookupSSID(ssid) : config.cellular;
     const target = {
       RULE: "rule",
       PROXY: "global-proxy",
@@ -69,8 +72,8 @@ function manager() {
     $surge.setOutboundMode(target);
   } else if (isLoon) {
     const conf = JSON.parse($config.getConfig());
-    const ssid = conf.ssid;
-    const mode = ssid ? lookupSSID(ssid) : config.cellular;
+    ssid = conf.ssid;
+    mode = ssid ? lookupSSID(ssid) : config.cellular;
     const target = {
       DIRECT: 0,
       RULE: 1,
@@ -97,16 +100,11 @@ function lookupSSID(ssid) {
 }
 
 function notify(title, subtitle, content) {
-  const TIMESTAMP_KEY = "running_mode_notified_time";
-  const THROTTLE_TIME = 3 * 1000;
-  const lastNotifiedTime = $persistentStore.read(THROTTLE_TIME);
-  if (
-    !lastNotifiedTime ||
-    new Date().getTime() - lastNotifiedTime > THROTTLE_TIME
-  ) {
-    $persistentStore.write(new Date().getTime().toString(), TIMESTAMP_KEY);
+  const SUBTITLE_STORE_KEY = "running_mode_notified_subtitle";
+  const lastNotifiedSubtitle = $persistentStore.read(SUBTITLE_STORE_KEY);
+
+  if (!lastNotifiedSubtitle || lastNotifiedSubtitle !== subtitle) {
+    $persistentStore.write(subtitle.toString(), SUBTITLE_STORE_KEY);
     $notification.post(title, subtitle, content);
   }
 }
-
-notify("title", "subtitle", "content")
