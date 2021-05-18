@@ -31,7 +31,7 @@ let config = {
   wifi: "RULE", // wifi下默认的模式
   all_direct: ["CaoRun_5G", "CaoRun"], // 指定全局直连的wifi名字
   all_proxy: [], // 指定全局代理的wifi名字
-  whitelist: ["Netease Music", "AdBlock"],
+  whitelist: [],
 };
 
 const isLoon = typeof $loon !== "undefined";
