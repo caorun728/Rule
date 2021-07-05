@@ -57,8 +57,8 @@ bilibili live = type=http-response,requires-body=1,max-size=0,pattern=https://ap
 
 # > Camera App
 # > Vsco 
-# > hostname: vsco.co
-http-response ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
+# > hostname: vsco.co, api.revenuecat.com
+http-response ^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
 
 # > VUE
 # > hostname: api.vuevideo.net
@@ -108,4 +108,4 @@ zhihu link = type=http-request,pattern=https?://link.zhihu.com/\?target=,script-
 
 
 [MITM]
-hostname = %APPEND% duckduckgo.com, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, www.zhihu.com, api.zhihu.com, link.zhihu.com, 118.89.204.198, vsco.co, api.vuevideo.net, api.picsart.c*, api.meiease.c*, api1.dobenge.cn
+hostname = %APPEND% duckduckgo.com, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, www.zhihu.com, api.zhihu.com, link.zhihu.com, 118.89.204.198, vsco.co, api.revenuecat.com, api.vuevideo.net, api.picsart.c*, api.meiease.c*, api1.dobenge.cn
