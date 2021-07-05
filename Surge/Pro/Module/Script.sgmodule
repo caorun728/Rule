@@ -70,7 +70,7 @@ http-response https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json r
 
 # > 水印精灵
 # > hostname: api1.dobenge.cn
-http-response https:\/\/api1\.dobenge\.cn\/api\/user\/getuserinfo requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/syjl.js
+http-response https:\/\/api1\.dobenge\.cn\/api\/user\/getuserinfo requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/caorun728/Rule/master/Surge/Pro/Script/syjl.js
 
 # > 大片-视频编辑器 VIP
 # > hostname api.vnision.com
