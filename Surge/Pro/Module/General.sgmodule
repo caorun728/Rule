@@ -1,0 +1,5 @@
+#!name=Surge Profile
+#!desc=Surge General Config
+
+[General]
+http-api = caorun@0.0.0.0:6166
