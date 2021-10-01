@@ -1,4 +1,4 @@
-#!name=Surge Profile
+#!name=Surge http-api
 #!desc=Surge General Config
 
 [General]
