@@ -1,0 +1,5 @@
+#!name=Surge Hide vpnicon
+#!desc=Surge Hide vpnicon
+
+[General]
+hide-vpn-icon=true
