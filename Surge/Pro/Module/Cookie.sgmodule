@@ -1,5 +1,6 @@
 #!name=Cookie
 #!desc=Surge Get Cookie All In One Module
+#!system=ios
 
 [Script]
 # > JD Cron

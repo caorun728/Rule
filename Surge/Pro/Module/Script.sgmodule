@@ -1,5 +1,6 @@
-#!name=Surge Script
-#!desc=Surge Script Pack All In One Module
+#!name=Script
+#!desc=Surge Script Pack All In One Module in local
+#!system=ios
 
 [Rule]
 # > Bilibili
@@ -39,6 +40,8 @@ AND,((USER-AGENT,ZhihuHybrid*), (URL-REGEX,.*recommend)),REJECT
 ^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
 ^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ https://s.m.taobao.com/h5?q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=tm\+([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=zdm\+([^&]+).+ https://search.m.smzdm.com/?v=b&s=$1 302
+^https:\/\/duckduckgo.com\/\?q=amz\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
 ^https:\/\/duckduckgo.com\/\?q=ac\+([^&]+).+ https://www.acfun.cn/search?keyword==$1 302
 ^https:\/\/duckduckgo.com\/\?q=bli\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
@@ -70,11 +73,11 @@ http-response https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json r
 
 # > 水印精灵
 # > hostname: api1.dobenge.cn
-http-response https:\/\/api1\.dobenge\.cn\/api\/user\/getuserinfo requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/caorun728/Rule/master/Surge/Pro/Script/syjl.js
+http-response https:\/\/api1\.dobenge\.cn\/api\/user\/getuserinfo requires-body=1,max-size=0,script-path=Script/syjl.js
 
 # > 大片-视频编辑器 VIP
-# > hostname api.vnision.com
-# > http-response ^https?:\/\/api\.vnision\.com\/v1\/(users\/|banners) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/dapian.js
+# > hostname vni.kwaiying.com
+// http-response ^https:\/\/vni\.kwaiying\.com\/api\/v1\/user\/profile requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/dapian.js
 
 # > 美颜相机一次性解锁内购（by黑黑酱）
 # > hostname:api.meiyan.com
@@ -82,7 +85,7 @@ myxj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.c
 
 # > 小影解锁
 # > hostname viva.v21xy.com
-# > vivavideo.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js,type=http-response,pattern=^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip
+// vivavideo.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js,type=http-response,pattern=^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip
 
 # > Weibo
 http-response ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
@@ -90,7 +93,7 @@ http-response ^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positiv
 
 # > WeRead
 # i.weread.qq.com
-http-response https?:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/caorun728/Rule/master/Surge/Pro/Script/weread.js,script-update-interval=0
+http-response https?:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary requires-body=1,max-size=0,script-path=Script/weread.js,script-update-interval=0
 
 
 # > Zhihu
@@ -101,10 +104,6 @@ zhihu recommend = type=http-response,requires-body=1,max-size=0,pattern=https://
 zhihu answer = type=http-response,requires-body=1,max-size=0,pattern=https://api.zhihu.com/v4/questions,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20answer.js
 zhihu link = type=http-request,pattern=https?://link.zhihu.com/\?target=,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20link.js
 
-
-# > TestFlight
-# hostname testflight.apple.com
-# > TF下载修正 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
 
 # > Kuwo Muisc
 # hostname vip1.kuwo.cn
