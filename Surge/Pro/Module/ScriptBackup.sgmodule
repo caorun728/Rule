@@ -1,0 +1,39 @@
+#!name=Scripts Backup
+#!desc=暂时移除的内容，不要启用！
+
+[Script]
+# > Cookie
+# > WPS
+# > hostname = zt.wps.cn
+# > http-request ^https:\/\/zt.wps.cn\/2018\/docer_check_in\/api\/act_list script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.cookie.js
+
+# > Task
+# > WPS
+# 打开 APP 我 > 签到 (右上角, 不用手动签到)
+# 打开 `我的WPS会员` 小程序 (手动签到)
+# WPS签到 = type=cron, cronexp=0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.js
+
+
+# > 大片-视频编辑器 VIP
+# > hostname vni.kwaiying.com
+http-response ^https:\/\/vni\.kwaiying\.com\/api\/v1\/user\/profile requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/dapian.js
+
+# > 小影解锁
+# > hostname viva.v21xy.com
+vivavideo.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js,type=http-response,pattern=^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip
+
+# > Weibo
+# > hostname api.weibo.cn, mapi.weibo.com, *.uve.weibo.com
+http-response ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
+http-response ^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist)|video/tiny_stream_video_list|photo/info|remind/unread_count) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
+
+# > 水印精灵
+# > hostname: api1.dobenge.cn
+http-response https:\/\/api1\.dobenge\.cn\/api\/user\/getuserinfo requires-body=1,max-size=0,script-path=Script/syjl.js
+
+# > WPS SVIP (account.wps.cn)
+WPS SVIP = type=http-response, pattern=^https?:\/\/account\.wps\.cn\/api\/users, requires-body=1, max-size=-1, script-path=Script/WPS_SVIP.js
+
+
+[MITM]
+hostname = %APPEND% vni.kwaiying.com, viva.v21xy.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com

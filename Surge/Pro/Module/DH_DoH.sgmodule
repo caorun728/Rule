@@ -1,0 +1,6 @@
+#!name=DH-DoH
+#!desc=Enable DNS over HTTPS (DoH) with DH Non-profit DNS service.
+#!raw=https://gist.githubusercontent.com/mangoclover/3efa03121f4d5eeb67821d63450ae0c2/raw/DNS%2520information.txt
+
+[General]
+doh-server = https://162.14.132.76/dns-query

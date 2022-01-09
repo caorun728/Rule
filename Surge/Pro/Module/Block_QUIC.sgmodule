@@ -1,5 +1,6 @@
 #!name=Block QUIC Protocol
 #!desc=Forced fallback HTTP2/HTTP1.1
+#!raw=https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Module/Block_QUIC.sgmodule
 
 [Rule]
 AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
