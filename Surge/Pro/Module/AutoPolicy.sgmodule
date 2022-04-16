@@ -1,6 +1,0 @@
-#!name=AutoPolicy
-#!desc=根据当前网络自动切换模式
-#!Github:https://github.com/Peng-YM/QuanX/blob/master/Tools/AutoPolicy/auto-policy.sgmodule
-
-[Script]
-event network-changed script-path=Script/auto-policy.js

@@ -1,7 +1,0 @@
-#!name=General
-#!desc=Surge General Profile
-
-[General]
-# http-api = caorun@0.0.0.0:6166
-# hide-vpn-icon=true
-# ipv6-vif=true
