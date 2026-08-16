@@ -67,7 +67,7 @@ payload:
   - DOMAIN,sydney.bing.com
   - DOMAIN,www.bing.com
   # > GitHub Copilot
-	- DOMAIN-SUFFIX,githubcopilot.com
+  - DOMAIN-SUFFIX,githubcopilot.com
   
 
   # > Cursor
@@ -136,8 +136,8 @@ payload:
 
   # > Perplexity AI
   - DOMAIN-SUFFIX,perplexity.ai
-	- DOMAIN-SUFFIX,pplx.ai
-	- DOMAIN,pplx-res.cloudinary.com
+  - DOMAIN-SUFFIX,pplx.ai
+  - DOMAIN,pplx-res.cloudinary.com
 
   # > POE
   - DOMAIN-SUFFIX,poe.com
