@@ -1,173 +1,116 @@
+# REPO:https://github.com/ConnersHua/RuleGo/blob/master/Surge/Ruleset/Extra/AI.list
 payload:
-  # > Augment
-  - DOMAIN-SUFFIX,augment.com
-  - DOMAIN-SUFFIX,augmentcode.com
+	# Apple Intelligence
+	- DOMAIN-SUFFIX,smoot.apple.com
+	- DOMAIN,apple-relay.apple.com
+	- DOMAIN,apple-relay.cloudflare.com
+	- DOMAIN,apple-relay.fastly-edge.com
+	- DOMAIN-SUFFIX,gateway.icloud.com
+	- DOMAIN,cp4.cloudflare.com
+	- DOMAIN,guzzoni.apple.com
+	- DOMAIN,gspe1-ssl.ls.apple.com
+	- DOMAIN-SUFFIX,apps.mzstatic.com
 
-  # > ChatGPT
-  -  DOMAIN-SUFFIX,chat.com
-  - DOMAIN-SUFFIX,chatgpt.com
-  - DOMAIN-SUFFIX,livekit.cloud
-  - DOMAIN-SUFFIX,oaistatic.com
-  - DOMAIN-SUFFIX,oaiusercontent.com
-  - DOMAIN-SUFFIX,openai.com
-  - DOMAIN-SUFFIX,sora.com
-  - DOMAIN,api.statsig.com
-  - DOMAIN,api-iam.intercom.io
-  - DOMAIN,o33249.ingest.sentry.io
-  - DOMAIN,openaiapi-site.azureedge.net
-  - DOMAIN-KEYWORD,openaiapi
-  - DOMAIN-KEYWORD,openaicom
-  # OpenRouter
-  - DOMAIN-SUFFIX,openrouter.ai
+	# Anthropic
+	# > Claude
+	- DOMAIN-SUFFIX,anthropic.com
+	- DOMAIN-SUFFIX,claude.ai
+	- DOMAIN-SUFFIX,claude.com
+	- DOMAIN-SUFFIX,clau.de
+	- DOMAIN-SUFFIX,claudemcpclient.com
+	- DOMAIN-SUFFIX,claudemcpcontent.com
+	- DOMAIN-SUFFIX,claudeusercontent.com
+	- DOMAIN,anthropic.auth0.com
+	- DOMAIN,anthropic.com.cdn.cloudflare.net
+	- DOMAIN,anthropic-com.ghost.io
+	- DOMAIN,servd-anthropic-website.b-cdn.net
 
-  # > Chat GPT API & CDN
-  - DOMAIN,cdn.openaimerge.com
-  - DOMAIN,cdn.workos.com
-  - DOMAIN,challenges.cloudflare.com
-  - DOMAIN,chat.openai.com.cdn.cloudflare.net
-  - DOMAIN,forwarder.workos.com
-  - DOMAIN,humb.apple.com
-  - DOMAIN,images.workoscdn.com
-  - DOMAIN,js.stripe.com
-  - DOMAIN,o207216.ingest.sentry.io
-  - DOMAIN,o33249.ingest.sentry.io
-  - DOMAIN,openaiapi-site.azureedge.net
-  - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
-  - DOMAIN,openaicomproductionae4b.blob.core.windows.net
-  - DOMAIN,production-openaicom-storage.azureedge.net
-  - DOMAIN,rum.browser-intake-datadoghq.com
-  - DOMAIN,setup.workos.com
-  - DOMAIN,workos.imgix.net
+	# OpenAI
+	# > ChatGPT
+	- DOMAIN-SUFFIX,chat.com
+	- DOMAIN-SUFFIX,chatgpt.com
+	- DOMAIN-SUFFIX,livekit.cloud
+	- DOMAIN-SUFFIX,oaistatic.com
+	- DOMAIN-SUFFIX,oaiusercontent.com
+	- DOMAIN-SUFFIX,openai.com
+	- DOMAIN-SUFFIX,sora.com
+	- DOMAIN,api.statsig.com
+	- DOMAIN,api-iam.intercom.io
+	- DOMAIN,o33249.ingest.sentry.io
+	- DOMAIN,openaiapi-site.azureedge.net
+	- DOMAIN-KEYWORD,openaiapi
+	- DOMAIN-KEYWORD,openaicom
+	# OpenRouter
+	- DOMAIN-SUFFIX,openrouter.ai
 
-  # > Cerebras
-  - DOMAIN-SUFFIX,cerebras.ai
+	# Cloudflare
+	# > AI Gateway
+	- DOMAIN,gateway.ai.cloudflare.com
 
-  # > Chorus
-  - DOMAIN-SUFFIX,chorus.sh
+	# Cursor
+	- DOMAIN-SUFFIX,cursor-cdn.com
+	- DOMAIN-SUFFIX,cursor.com
+	- DOMAIN-SUFFIX,cursor.sh
+	- DOMAIN-SUFFIX,cursorapi.com
 
-  # Anthropic
-  # > Claude
-  - DOMAIN-SUFFIX,anthropic.com
-  - DOMAIN-SUFFIX,claude.ai
-  - DOMAIN-SUFFIX,claude.com
-  - DOMAIN-SUFFIX,clau.de
-  - DOMAIN-SUFFIX,claudemcpclient.com
-  - DOMAIN-SUFFIX,claudemcpcontent.com
-  - DOMAIN-SUFFIX,claudeusercontent.com
-  - DOMAIN,anthropic.auth0.com
-  - DOMAIN,anthropic.com.cdn.cloudflare.net
-  - DOMAIN,anthropic-com.ghost.io
-  - DOMAIN,servd-anthropic-website.b-cdn.net
+	# Zed
+	- DOMAIN-SUFFIX,zed.dev
 
-  # > Cloudflare AI Gateway
-  - DOMAIN,gateway.ai.cloudflare.com
+	# Google
+	# > AI Studio
+	- DOMAIN-SUFFIX,generativeai.google
+	- DOMAIN-SUFFIX,makersuite.google.com
+	- DOMAIN,aistudio.google.com
+	- DOMAIN,alkalicore-pa.clients6.google.com
+	- DOMAIN,alkalimakersuite-pa.clients6.google.com
+	# > Antigravity
+	- DOMAIN,antigravity.google
+	- DOMAIN,antigravity-unleash.goog
+	# > DeepMind
+	- DOMAIN-SUFFIX,deepmind.com
+	- DOMAIN-SUFFIX,deepmind.google
+	# > Gemini
+	- DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+	- DOMAIN-SUFFIX,geller-pa.googleapis.com
+	- DOMAIN-SUFFIX,generativelanguage.googleapis.com
+	- DOMAIN,ai.google.dev
+	- DOMAIN,bard.google.com
+	- DOMAIN,gemini.google.com
+	# > NotebookLM
+	- DOMAIN-KEYWORD,notebooklm.google
+	# > Search Labs
+	- DOMAIN-KEYWORD,labs.google
 
-  # > Copilot
-  - DOMAIN,copilot.microsoft.com
-  - DOMAIN,sydney.bing.com
-  - DOMAIN,www.bing.com
-  # > GitHub Copilot
-  - DOMAIN-SUFFIX,githubcopilot.com
-  
+	# Groq
+	- DOMAIN-SUFFIX,groq.com
 
-  # > Cursor
-  - DOMAIN-SUFFIX,cursor-cdn.com
-  - DOMAIN-SUFFIX,cursor.com
-  - DOMAIN-SUFFIX,cursor.sh
-  - DOMAIN-SUFFIX,cursorapi.com
+	# JetBrains AI
+	- DOMAIN-SUFFIX,grazie.ai
 
-  # > DIA
-  - DOMAIN-SUFFIX,diabrowser.engineering
+	# Meta
+	- DOMAIN-SUFFIX,meta.ai
+	- DOMAIN,imagine.meta.com
 
-  # > Dify.AI
-  - DOMAIN-SUFFIX,dify.ai
+	# Microsoft
+	# > Copilot
+	- DOMAIN,copilot.microsoft.com
+	- DOMAIN,sydney.bing.com
+	- DOMAIN,www.bing.com
+	# > GitHub Copilot
+	- DOMAIN-SUFFIX,githubcopilot.com
 
-  # > GitHub Copilot
-  - DOMAIN,api.github.com
+	# Perplexity
+	- DOMAIN-SUFFIX,perplexity.ai
+	- DOMAIN-SUFFIX,pplx.ai
+	- DOMAIN,pplx-res.cloudinary.com
 
-  # Google
-  # > AI Studio
-  - DOMAIN-SUFFIX,generativeai.google
-  - DOMAIN-SUFFIX,makersuite.google.com
-  - DOMAIN,aistudio.google.com
-  - DOMAIN,alkalicore-pa.clients6.google.com
-  - DOMAIN,alkalimakersuite-pa.clients6.google.com
-  # > Antigravity
-  - DOMAIN,antigravity.google
-  - DOMAIN,antigravity-unleash.goog
-  # > DeepMind
-  - DOMAIN-SUFFIX,deepmind.com
-  - DOMAIN-SUFFIX,deepmind.google
-  # > Gemini
-  - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-  - DOMAIN-SUFFIX,geller-pa.googleapis.com
-  - DOMAIN-SUFFIX,generativelanguage.googleapis.com
-  - DOMAIN,ai.google.dev
-  - DOMAIN,bard.google.com
-  - DOMAIN,gemini.google.com
-  # > NotebookLM
-  - DOMAIN-KEYWORD,notebooklm.google
-  # > Search Labs
-  - DOMAIN-KEYWORD,labs.google
+	# xAI
+	- DOMAIN-SUFFIX,grok.com
+	- DOMAIN-SUFFIX,x.ai
 
-  # > Grok
-  - DOMAIN-SUFFIX,x.ai
-  - DOMAIN-SUFFIX,grok.com
-
-  # > Groq
-  - DOMAIN-SUFFIX,groq.com
-
-  # > Jasper
-  - DOMAIN-SUFFIX,clipdrop.co
-  - DOMAIN-SUFFIX,jasper.ai
-
-  # > JetBrains
-  - DOMAIN-SUFFIX,jetbrains.ai
-
-  # > Meta AI
-  - DOMAIN-SUFFIX,meta.ai
-  - DOMAIN-SUFFIX,meta.com
-
-  # > OpenArt
-  - DOMAIN-SUFFIX,openart.ai
-
-  # > OpenRouter
-  - DOMAIN-SUFFIX,openrouter.ai
-
-  # > Perplexity AI
-  - DOMAIN-SUFFIX,perplexity.ai
-  - DOMAIN-SUFFIX,pplx.ai
-  - DOMAIN,pplx-res.cloudinary.com
-
-  # > POE
-  - DOMAIN-SUFFIX,poe.com
-
-  # > Siri
-  - DOMAIN-SUFFIX,apple-relay.apple.com
-  - DOMAIN-SUFFIX,apple-relay.fastly-edge.com
-  - DOMAIN-SUFFIX,apple-relay.cloudflare.com
-  - DOMAIN-SUFFIX,apple-relay.mask.apple-dns.net
-  - DOMAIN-SUFFIX,guzzoni.apple.com
-  - DOMAIN-SUFFIX,cp4.cloudflare.com
-  - DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
-  - DOMAIN-SUFFIX,smoot.apple.com
-  - DOMAIN-SUFFIX,amp-api.apps.apple.com
-  - DOMAIN-SUFFIX,apps.mzstatic.com
-  - DOMAIN-SUFFIX,gateway.icloud.com
-  - DOMAIN-SUFFIX,updates.cdn-apple.com
-
-  # > Sora
-  - DOMAIN-SUFFIX,sora.com
-  # - DOMAIN,sora-cdn.oaistatic.com
-
-  # > TRAE
-  - DOMAIN-SUFFIX,trae.ai
-  - DOMAIN-SUFFIX,traeapi.us
-
-  # > Windsurf
-  - DOMAIN-SUFFIX,windsurf.com
-  - DOMAIN-SUFFIX,codeium.com
-  - DOMAIN-SUFFIX,codeiumdata.com
-
-  # > Zed
-  - DOMAIN-SUFFIX,zed.dev
+	# Doubao
+	# > Doubao Dola
+	- DOMAIN-SUFFIX,cici.com,extended-matching
+	- DOMAIN-SUFFIX,ciciai.com,extended-matching
+	- DOMAIN-SUFFIX,dola.com,extended-matching
+	- DOMAIN-SUFFIX,byteoversea.com,extended-matching
