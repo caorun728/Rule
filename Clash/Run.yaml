@@ -1,0 +1,11 @@
+# NAME: RunRule
+payload:
+  # Other
+  - DOMAIN-SUFFIX,bt.sb,Proxy
+  # Microsoft
+  # > Copilot
+  - DOMAIN,copilot.microsoft.com
+  - DOMAIN,sydney.bing.com
+  - DOMAIN,www.bing.com
+# > GitHub Copilot
+  - DOMAIN-SUFFIX,githubcopilot.com
