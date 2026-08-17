@@ -1,0 +1,3 @@
+# 增补一些需要proxy的协议
+payload:
+  - DOMAIN-SUFFIX,bt.sb
